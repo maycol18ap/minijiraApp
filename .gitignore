@@ -1,0 +1,20 @@
+# Artefactos de compilación .NET
+bin/
+obj/
+out/
+
+# Archivos de usuario de Visual Studio / Rider
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Configuración local con secretos (no subir credenciales reales)
+appsettings.Local.json
+
+# Logs
+*.log
+
+# SO
+.DS_Store
+Thumbs.db

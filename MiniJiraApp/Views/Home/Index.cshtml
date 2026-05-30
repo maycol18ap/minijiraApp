@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="px-4 py-5 my-3 text-center">
+    <i class="bi bi-kanban text-primary" style="font-size: 4rem;"></i>
+    <h1 class="display-5 fw-bold mt-3">MiniJira</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">
+            Sistema de gestión de proyectos y tareas. Organiza tus proyectos,
+            asigna tareas y haz seguimiento de su estado de forma sencilla.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a asp-controller="Proyectos" asp-action="Index" class="btn btn-primary btn-lg px-4 gap-3">
+                <i class="bi bi-folder2-open"></i> Ver Proyectos
+            </a>
+            <a asp-controller="Account" asp-action="Register" class="btn btn-outline-secondary btn-lg px-4">
+                <i class="bi bi-person-plus"></i> Registrarse
+            </a>
+        </div>
+    </div>
+</div>
