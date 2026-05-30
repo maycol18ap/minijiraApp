@@ -140,20 +140,6 @@ curl http://localhost:5140/Proyectos/GetAllJson
 
 ---
 
-## 📸 Capturas de pantalla
-
-> Reemplaza estas líneas con tus propias capturas tras ejecutar la app.
-
-| Pantalla            | Imagen                          |
-| ------------------- | ------------------------------- |
-| Inicio              | `docs/01-inicio.png`            |
-| Registro / Login    | `docs/02-login.png`             |
-| Lista de Proyectos  | `docs/03-proyectos.png`         |
-| Detalle con tareas  | `docs/04-detalle.png`           |
-| Endpoint JSON       | `docs/05-json.png`              |
-
----
-
 ## 📖 Documentación adicional
 
 - **[`TUTORIAL.md`](./TUTORIAL.md)** — Guía paso a paso de **cómo usar la aplicación** (registrarse, iniciar sesión, crear proyectos y tareas, usar la API).

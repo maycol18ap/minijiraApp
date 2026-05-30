@@ -18,3 +18,5 @@ appsettings.Local.json
 # SO
 .DS_Store
 Thumbs.db
+
+.claude
