@@ -61,6 +61,7 @@ namespace MiniJiraApp.Controllers
             }
 
             await _proyectoRepository.AddAsync(proyecto);
+            TempData["Mensaje"] = $"Proyecto \"{proyecto.Nombre}\" creado correctamente.";
             return RedirectToAction(nameof(Index));
         }
 
@@ -93,6 +94,7 @@ namespace MiniJiraApp.Controllers
             }
 
             await _proyectoRepository.UpdateAsync(proyecto);
+            TempData["Mensaje"] = $"Proyecto \"{proyecto.Nombre}\" actualizado correctamente.";
             return RedirectToAction(nameof(Index));
         }
 
@@ -115,6 +117,8 @@ namespace MiniJiraApp.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             await _proyectoRepository.DeleteAsync(id);
+            TempData["Mensaje"] = "Proyecto eliminado correctamente.";
+            TempData["TipoMensaje"] = "warning";
             return RedirectToAction(nameof(Index));
         }
 

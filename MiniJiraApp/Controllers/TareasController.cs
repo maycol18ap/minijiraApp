@@ -54,6 +54,7 @@ namespace MiniJiraApp.Controllers
             }
 
             await _tareaRepository.AddAsync(tarea);
+            TempData["Mensaje"] = $"Tarea \"{tarea.Titulo}\" creada correctamente.";
             return RedirectToAction("Details", "Proyectos", new { id = tarea.ProyectoId });
         }
 
@@ -86,6 +87,7 @@ namespace MiniJiraApp.Controllers
             }
 
             await _tareaRepository.UpdateAsync(tarea);
+            TempData["Mensaje"] = $"Tarea \"{tarea.Titulo}\" actualizada correctamente.";
             return RedirectToAction("Details", "Proyectos", new { id = tarea.ProyectoId });
         }
 
@@ -115,6 +117,8 @@ namespace MiniJiraApp.Controllers
 
             var proyectoId = tarea.ProyectoId;
             await _tareaRepository.DeleteAsync(id);
+            TempData["Mensaje"] = "Tarea eliminada correctamente.";
+            TempData["TipoMensaje"] = "warning";
             return RedirectToAction("Details", "Proyectos", new { id = proyectoId });
         }
     }

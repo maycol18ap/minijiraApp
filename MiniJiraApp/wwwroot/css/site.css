@@ -1,5 +1,24 @@
+/* ============================================================
+   MiniJira — Tema personalizado (verde oscuro + grises + azul)
+   ============================================================ */
+
+:root {
+  --mj-green-dark: #1b4332;   /* Verde principal (navbar, botones) */
+  --mj-green: #2d6a4f;        /* Verde medio */
+  --mj-green-light: #40916c;  /* Verde claro (hover) */
+  --mj-blue: #1d3a5f;         /* Azul profundo */
+  --mj-blue-accent: #2c5f8a;  /* Azul acento */
+  --mj-gray-bg: #f3f5f4;      /* Fondo gris suave */
+  --mj-gray-card: #ffffff;    /* Tarjetas */
+  --mj-gray-border: #d9dee0;  /* Bordes */
+  --mj-text: #263238;         /* Texto principal */
+  --mj-muted: #5f6b6d;        /* Texto secundario */
+}
+
 html {
   font-size: 14px;
+  position: relative;
+  min-height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -8,24 +27,151 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
   margin-bottom: 60px;
+  background-color: var(--mj-gray-bg);
+  color: var(--mj-text);
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+/* ---------- Navbar ---------- */
+.navbar.bg-primary {
+  background: linear-gradient(90deg, var(--mj-green-dark) 0%, var(--mj-blue) 100%) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+.navbar .navbar-brand {
+  letter-spacing: 0.3px;
+}
+
+.navbar .nav-link {
+  transition: opacity 0.15s ease;
+}
+
+.navbar .nav-link:hover {
+  opacity: 0.8;
+}
+
+/* ---------- Enlaces ---------- */
+a {
+  color: var(--mj-green);
+}
+
+a:hover {
+  color: var(--mj-green-dark);
+}
+
+/* ---------- Botones ---------- */
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--mj-blue-accent);
+  --bs-btn-border-color: var(--mj-blue-accent);
+  --bs-btn-hover-bg: var(--mj-blue);
+  --bs-btn-hover-border-color: var(--mj-blue);
+  --bs-btn-active-bg: var(--mj-blue);
+  --bs-btn-active-border-color: var(--mj-blue);
+}
+
+.btn-success {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--mj-green);
+  --bs-btn-border-color: var(--mj-green);
+  --bs-btn-hover-bg: var(--mj-green-dark);
+  --bs-btn-hover-border-color: var(--mj-green-dark);
+  --bs-btn-active-bg: var(--mj-green-dark);
+  --bs-btn-active-border-color: var(--mj-green-dark);
+}
+
+.btn-info {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--mj-blue-accent);
+  --bs-btn-border-color: var(--mj-blue-accent);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--mj-blue);
+  --bs-btn-hover-border-color: var(--mj-blue);
+}
+
+.btn-outline-secondary {
+  --bs-btn-color: var(--mj-muted);
+  --bs-btn-border-color: var(--mj-gray-border);
+  --bs-btn-hover-bg: var(--mj-muted);
+  --bs-btn-hover-border-color: var(--mj-muted);
+}
+
+.btn:focus, .btn:active:focus,
+.form-control:focus, .form-check-input:focus, .form-select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(45, 106, 79, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: var(--mj-green);
+  border-color: var(--mj-green);
+}
+
+/* ---------- Tarjetas ---------- */
+.card {
+  background-color: var(--mj-gray-card);
+  border: 1px solid var(--mj-gray-border);
+  border-radius: 0.6rem;
+}
+
+.card .card-title {
+  color: var(--mj-green-dark);
+}
+
+/* ---------- Tablas ---------- */
+.table > thead.table-light th {
+  background-color: var(--mj-green-dark);
+  color: #fff;
+  border-color: var(--mj-green-dark);
+}
+
+.table-hover > tbody > tr:hover > * {
+  background-color: rgba(45, 106, 79, 0.06);
+}
+
+/* ---------- Badges de estado (refuerzo de color) ---------- */
+.badge.bg-success { background-color: var(--mj-green) !important; }
+.badge.bg-primary { background-color: var(--mj-blue-accent) !important; }
+.badge.bg-secondary { background-color: var(--mj-muted) !important; }
+
+/* ---------- Texto utilitario ---------- */
+.text-primary { color: var(--mj-green-dark) !important; }
+
+/* ---------- Alertas ---------- */
+.alert-info {
+  background-color: #e8f0ee;
+  border-color: var(--mj-green-light);
+  color: var(--mj-green-dark);
+}
+
+/* ---------- Hero / landing ---------- */
+.bi.text-primary {
+  color: var(--mj-green-dark) !important;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+  background-color: #fff;
+}
+
+.border-top { border-top: 1px solid var(--mj-gray-border) !important; }
+.border-bottom { border-bottom: 1px solid var(--mj-gray-border) !important; }
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+/* ---------- Formularios ---------- */
+.form-control, .form-select {
+  border-color: var(--mj-gray-border);
+}
+
+.form-label {
+  font-weight: 500;
+  color: var(--mj-text);
 }

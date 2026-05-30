@@ -156,4 +156,5 @@ curl http://localhost:5140/Proyectos/GetAllJson
 
 ## 📖 Documentación adicional
 
-Consulta **[`CRITERIOS.md`](./CRITERIOS.md)** para una explicación detallada de **cómo se implementó cada criterio de evaluación** (útil para estudiar y defender el proyecto).
+- **[`TUTORIAL.md`](./TUTORIAL.md)** — Guía paso a paso de **cómo usar la aplicación** (registrarse, iniciar sesión, crear proyectos y tareas, usar la API).
+- **[`CRITERIOS.md`](./CRITERIOS.md)** — Explicación detallada de **cómo se implementó cada criterio de evaluación** (útil para estudiar y defender el proyecto).
